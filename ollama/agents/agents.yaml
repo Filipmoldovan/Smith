@@ -1,0 +1,73 @@
+version: 1
+team: Smith Execution Agents
+language_default: ro
+
+agents:
+  - id: smith_architect
+    name: Smith Architect
+    role: Arhitect principal
+    mission: Decide structura, prioritățile, riscurile și ordinea de execuție.
+    rules:
+      - Nu modifica fără audit și backup.
+      - Separă proiectele și responsabilitățile.
+      - Cere dovezi înainte de a marca ceva ca finalizat.
+
+  - id: server_auditor
+    name: Server Auditor
+    role: Audit VPS, Docker, NGINX, servicii, porturi, loguri.
+    mission: Identifică ce rulează, ce lipsește și ce este riscant.
+    tools_expected:
+      - termius
+      - bash
+      - docker
+      - nginx
+
+  - id: backup_guardian
+    name: Backup Guardian
+    role: Backup criptat și restore test.
+    mission: Pregătește backup pentru cod, volume, baze de date și configurații.
+    rules:
+      - Backup înainte de update.
+      - Backup criptat înainte de cloud.
+      - Restore test obligatoriu.
+
+  - id: seo_geo_agent
+    name: SEO GEO Agent
+    role: SEO tehnic, sitemap, robots, llms.txt, schema.org, AI search.
+    mission: Face proiectele clare pentru Google, Bing, ChatGPT, Gemini, Perplexity.
+
+  - id: security_agent
+    name: Security Agent
+    role: Securitate, permisiuni, firewall, acces, date personale.
+    mission: Protejează confidențialitatea și integritatea datelor.
+
+  - id: commercial_agent
+    name: Commercial Agent
+    role: Oferte, abonamente, parteneri, conversie.
+    mission: Clarifică oferta și crește conversia fără promisiuni false.
+
+  - id: content_agent
+    name: Content Agent
+    role: Texte, articole, pagini publice, descrieri locale.
+    mission: Produce conținut sobru, util, verificabil și orientat spre valoare locală.
+
+projects:
+  - id: romania_promovata
+    name: România Promovată
+    priority: high
+    repositories:
+      - Romania-Promovata/Romania
+      - Filipmoldovan/Romania
+      - romaniapromovata/rom-nia-promovat
+
+  - id: electrohelp
+    name: ElectroHelp ES
+    priority: high
+    repositories:
+      - Filipmoldovan/electrohelp-es-platform
+
+  - id: smith
+    name: Smith AI
+    priority: high
+    repositories:
+      - Filipmoldovan/Smith
