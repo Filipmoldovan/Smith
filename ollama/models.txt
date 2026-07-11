@@ -1,0 +1,7 @@
+# Smith standard Ollama models
+# Editează lista în funcție de resursele calculatorului/serverului.
+
+llama3.2:3b
+qwen2.5:7b
+mistral:7b
+nomic-embed-text
