@@ -1,0 +1,18 @@
+services:
+  smith-business-os:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8788
+      SMITH_OS_PUBLIC_LISTEN_ACKNOWLEDGED: 'true'
+      SMITH_OS_DATABASE: /srv/app/data/store.json
+    # Bind ONLY to server loopback. Place reverse proxy with TLS + identity control in front.
+    ports: ['127.0.0.1:8788:8788']
+    volumes: ['smith_os_data:/srv/app/data']
+    read_only: true
+    tmpfs: ['/tmp']
+    security_opt: ['no-new-privileges:true']
+volumes:
+  smith_os_data:
