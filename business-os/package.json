@@ -1,0 +1,12 @@
+{
+  "name": "smith-business-os",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {"node": ">=22"},
+  "scripts": {
+    "start": "node src/server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check src/server.mjs && node --check src/api.mjs && node --check src/store.mjs && node --check public/app.js"
+  }
+}
